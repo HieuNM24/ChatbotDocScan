@@ -1,0 +1,111 @@
+﻿/* ── Document Tab ──────────────────────────────── */
+.doc-tab {
+  max-width: 680px;
+  margin: 32px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Drop zone ─────────────────────────────────── */
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--bg-card);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.dropzone:hover, .dropzone.dragging {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+.dropzone.has-file { border-color: var(--primary); border-style: solid; }
+
+.drop-hint { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.drop-hint p { font-size: 15px; font-weight: 500; color: var(--text); }
+.drop-hint span { font-size: 13px; color: var(--text-muted); }
+
+.file-preview { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.file-name { font-size: 15px; font-weight: 600; color: var(--primary); word-break: break-all; }
+.file-size { font-size: 12px; color: var(--text-muted); }
+
+.icon-upload { color: var(--text-muted); }
+.icon-file   { color: var(--primary); }
+
+/* ── Upload actions ────────────────────────────── */
+.upload-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* ── Progress bar ──────────────────────────────── */
+.progress-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* ── Document list ─────────────────────────────── */
+.doc-list-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.doc-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.doc-list-header h3 { font-size: 14px; font-weight: 600; color: var(--text); }
+
+.empty-state {
+  padding: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+.doc-item:last-child { border-bottom: none; }
+.doc-item:hover { background: var(--bg-hover); }
+
+.doc-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.doc-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.doc-meta { font-size: 12px; color: var(--text-muted); }

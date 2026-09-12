@@ -1,0 +1,32 @@
+﻿# ── .NET & Build Artifacts ──
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ── Secrets & Local Configs ──
+backend/appsettings.Development.json
+backend/appsettings.Production.json
+backend/appsettings.*.json
+!backend/appsettings.json
+!backend/appsettings.Example.json
+.env
+*.env.*
+*.env
+
+# ── Node / Frontend ──
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# ── OS & IDE Files ──
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
